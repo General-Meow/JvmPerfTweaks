@@ -94,6 +94,16 @@ Java Runtime Params
     - 2 main ones
     - -XX:+UseConcMarkSweepGC
     - -XX:+UseG1GC
+- For Java Mission Control, you need to enable some flags on the app being profiled
+  - -XX:+UnlockCommercialFeatures -XX:+FlightRecorder
+  - To be able to run JMC over JMX, you need jmxremote_optional.jar in the jre/lib/ext directory.
+  - Download the jmxremote_optional.jar with "mvn -q dependency:copy -DoutputDirectory=. -Dartifact=org.jvnet.opendmk:jmxremote_optional:1.0_01-ea:jar" and copy it to the directory
+
+Profiling tools
+- Profiling tools can be run locally and remotely.
+- When running remotely, the data can be streamed over RMI or MP (Messaging Protocal)
+- When using MP, you must setup the jmxremote_optional jar and place it in the correct places
+
 
 
 
