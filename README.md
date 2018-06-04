@@ -82,7 +82,7 @@ Java Runtime Params
 - -XX:MaxPermSize=<size> - set the size of the PermGen e.g. -XX:MaxPermSize=200m
 - -verbose:gc print to console when gc takes place
 - -Xmn set the size of the young generation heap space - by default it is 1/3 of the entire heap space. Oracle recommends 1/4 to 1/2 of the heap size. e.g. -Xmn32m . this also sets the initial size so both max and intial need to be bigger than this
-- -XX:HeapDumpOnOutOfMemory creates a heap dump file when the exception occurs
+- -XX:+HeapDumpOnOutOfMemoryError creates a heap dump file when the exception occurs
 - -XX:HeapDumpPath=<PATH> place heap dump file in the defined PATH
 - Types of collector
   - Serial - single threaded marker, good for Apps with small amount of data. or single core pcs
