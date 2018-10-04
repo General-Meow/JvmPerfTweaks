@@ -72,7 +72,10 @@ Tips
 - The default memory usage graph (heap) is for the entire heap space - including oldgen, new gen, meta and pool space
 - To analyse memory usage by objects, you can create a heap dump from JVisualVM, save it as a file and use eclipse Memory Analyser (MAT)
 - In MAT load the saved file and use the 'Leaks suspect report' to get analysis of used memory
-
+- Thread dumps can be done a number of ways.
+  - jstack -l <PID> > <OUTPUT_FILE>
+  - kill -3 <PID> #the dump will be in a log file if its in a web container
+  - jvisualvm
 
 Java Runtime Params
 - -Xmx set the max heap size e.g. -Xmx32m (default is usually 1/4 of the system memory)
